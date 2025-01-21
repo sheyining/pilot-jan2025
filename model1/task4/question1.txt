@@ -1,0 +1,15 @@
+QUESTION 1:
+
+In writing, please identify the bug in the diagrams.
+
+Describe the "phenomenon", not the "cause".
+
+For example, which parts of the diagram exhibit the bug?
+
+== BEGIN YOUR RESPONSE HERE ==
+
+
+
+== END OF RESPONSE ==
+
+Please commit the GitHub codespace with the commit string `m1t4q1` when completed.

@@ -1,0 +1,15 @@
+QUESTION 2:
+
+Where is the bug?
+
+If necessary, please identify the line number(s) in the operation implementation contributing to the bug.
+
+Please describe why that is a bug.
+
+== BEGIN YOUR RESPONSE HERE ==
+
+
+
+== END OF RESPONSE ==
+
+Please commit the GitHub codespace with the commit string `m1t1q2` when completed.
