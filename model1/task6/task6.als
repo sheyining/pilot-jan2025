@@ -1,7 +1,6 @@
 // =======================
 // STATIC STRUCTURE
 // =======================
-
 sig Network {
   all_nodes: set Node,
   all_data: set Data,
