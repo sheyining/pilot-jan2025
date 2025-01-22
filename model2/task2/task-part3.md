@@ -18,6 +18,6 @@ Please describe why that is a bug.
 
 **Once you have an answer to this question in mind, please let the researchers know. Do not proceed until instructed.**
 
-Please write down your answer in question1.txt. Once you have done so, please commit to the GitHub workspace with the message `m2t2q2`
+Please write down your answer in `question2.txt`. Once you have done so, please commit to the GitHub workspace with the message `m2t2q2`
 
 **You have completed Task 2 of Model 2. Please let the researchers know. Thank you!**
