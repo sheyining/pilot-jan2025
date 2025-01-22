@@ -1,15 +1,9 @@
 QUESTION 2:
 
-Where is the bug?
+What is the bug in the implementation of the buggy operations?
 
-If necessary, please identify the line number(s) in the operation implementation contributing to the bug.
-
-Please describe why that is a bug.
+Is the implementation missing something, or overspecifying something, or mis-specifying something?
+If so, what? Or is the bug something else?
 
 == BEGIN YOUR RESPONSE HERE ==
 
-
-
-== END OF RESPONSE ==
-
-Please commit the GitHub codespace with the commit string `m2t4q2` when completed.
