@@ -8,8 +8,3 @@ For example, which parts of the diagram exhibit the bug?
 
 == BEGIN YOUR RESPONSE HERE ==
 
-
-
-== END OF RESPONSE ==
-
-Please commit the GitHub codespace with the commit string `m1t5q1` when completed.
