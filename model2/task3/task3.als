@@ -77,16 +77,16 @@ pred invariant [s: SocialNetwork] {
 // =======================
 // BUGGY OPERATION
 // =======================
-pred addTag [s, sn: SocialNetwork, c: Content, u: User] {
-  c in s.all_contents
-  u in s.all_users
+pred addTag [net0, net1: SocialNetwork, c: Content, u: User] {
+  c in net0.all_contents
+  u in net0.all_users
 
-  sn.all_users = s.all_users
-  sn.all_photos = s.all_photos
-  sn.all_comments = s.all_comments
-  sn.all_contents = s.all_contents
-  sn.friends = s.friends
-  sn.user_content_map = s.user_content_map
-  sn.content_tag_map = s.content_tag_map + (c -> u)
-  sn.content_comment_map = s.content_comment_map
+  net1.all_users = net0.all_users
+  net1.all_photos = net0.all_photos
+  net1.all_comments = net0.all_comments
+  net1.all_contents = net0.all_contents
+  net1.friends = net0.friends
+  net1.user_content_map = net0.user_content_map
+  net1.content_tag_map = net0.content_tag_map + (c -> u)
+  net1.content_comment_map = net0.content_comment_map
 }

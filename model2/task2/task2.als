@@ -69,18 +69,18 @@ pred invariant [s: SocialNetwork] {
 // =======================
 // BUGGY OPERATION
 // =======================
-pred removeUser [s, sn: SocialNetwork, u: User] { 
-  u in s.all_users
-  sn.all_users = s.all_users - u
-  sn.friends = s.friends - (u -> User) - (User -> u)
+pred removeUser [net0, net1: SocialNetwork, u: User] { 
+  u in net0.all_users
+  net1.all_users = net0.all_users - u
+  net1.friends = net0.friends - (u -> User) - (User -> u)
 
-  let contentsByUser = u.(s.user_content_map) | {
-    sn.user_content_map = s.user_content_map - (univ -> contentsByUser)
-    sn.content_tag_map = s.content_tag_map - (contentsByUser -> univ) - (univ -> u)
-    sn.content_comment_map = s.content_comment_map - (contentsByUser -> univ) - (univ -> contentsByUser)
+  let contentsByUser = u.(net0.user_content_map) | {
+    net1.user_content_map = net0.user_content_map - (univ -> contentsByUser)
+    net1.content_tag_map = net0.content_tag_map - (contentsByUser -> univ) - (univ -> u)
+    net1.content_comment_map = net0.content_comment_map - (contentsByUser -> univ) - (univ -> contentsByUser)
   }
 
-  sn.all_photos = User.(sn.user_content_map) & Photo
-  sn.all_comments = User.(sn.user_content_map) & Comment
-  sn.all_contents = sn.all_photos + sn.all_comments
+  net1.all_photos = User.(net1.user_content_map) & Photo
+  net1.all_comments = User.(net1.user_content_map) & Comment
+  net1.all_contents = net1.all_photos + net1.all_comments
 }

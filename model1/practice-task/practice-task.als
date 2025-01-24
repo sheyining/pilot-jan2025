@@ -32,10 +32,10 @@ pred Invariant [n: Network] {
 // BUGGY OPERATION
 // =======================
 
-pred AddNodeAfter [n0, n1: Network, node0: Node, node1: Node] {
-  node0 not in n0.all_nodes
-  node1 in n0.all_nodes
+pred AddNodeAfter [net0, net1: Network, node0: Node, node1: Node] {
+  node0 not in net0.all_nodes
+  node1 in net0.all_nodes
 
-  n1.all_nodes = n0.all_nodes + node0
-  n1.succ = n0.succ - (node1 -> Node) + (node1 -> node0) + (node0 -> node1.(n0.succ))
+  net1.all_nodes = net0.all_nodes + node0
+  net1.succ = net0.succ - (node1 -> Node) + (node1 -> node0) + (node0 -> node1.(net0.succ))
 }

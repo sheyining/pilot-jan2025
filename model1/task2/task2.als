@@ -30,18 +30,18 @@ pred Invariant [n: Network] {
 // BUGGY OPERATION
 // =======================
 
-pred RemoveNode [n0, n1: Network, node: Node] {
-  node in n0.all_nodes
-  n1.all_nodes = n0.all_nodes - node
-  let nodeBefore = (n0.succ).node, nodeAfter = node.(n0.succ) |
+pred RemoveNode [net0, net1: Network, node: Node] {
+  node in net0.all_nodes
+  net1.all_nodes = net0.all_nodes - node
+  let nodeBefore = (net0.succ).node, nodeAfter = node.(net0.succ) |
 
-  n1.succ = n0.succ + (nodeAfter -> nodeBefore) - (node -> univ) - (univ -> node)
+  net1.succ = net0.succ + (nodeAfter -> nodeBefore) - (node -> univ) - (univ -> node)
 
-  let associatedData = node.(n0.node_data) {
-    n1.node_data = n0.node_data - (node -> associatedData)
+  let associatedData = node.(net0.node_data) {
+    net1.node_data = net0.node_data - (node -> associatedData)
 
-    n1.all_data = { d: n0.all_data |
-      d not in associatedData or (n1.node_data).d != none
+    net1.all_data = { d: net0.all_data |
+      d not in associatedData or (net1.node_data).d != none
     }
   }
 }

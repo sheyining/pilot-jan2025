@@ -28,12 +28,12 @@ pred Invariant [n: Network] {
 // =======================
 // BUGGY OPERATION
 // =======================
-pred PassData [n0, n1: Network] {
-  n1.all_nodes = n0.all_nodes
-  n1.all_data = n0.all_data
-  n1.succ = n0.succ
+pred PassData [net0, net1: Network] {
+  net1.all_nodes = net0.all_nodes
+  net1.all_data = net0.all_data
+  net1.succ = net0.succ
 
-  all x: n0.all_nodes |
-  let y = x.(n0.succ) |
-  n1.node_data[x] = n0.node_data[y]
+  all x: net0.all_nodes |
+  let y = x.(net0.succ) |
+  net1.node_data[x] = net0.node_data[y]
 }

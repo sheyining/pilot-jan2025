@@ -79,16 +79,16 @@ pred invariant [s: SocialNetwork] {
 // BUGGY OPERATION
 // =======================
 
-pred removeFriend [s, sn: SocialNetwork, u1: User, u2: User] {
-  u1 in s.all_users
-  u2 in s.all_users
-  u1 -> u2 in s.friends
+pred removeFriend [net0, net1: SocialNetwork, u1: User, u2: User] {
+  u1 in net0.all_users
+  u2 in net0.all_users
+  u1 -> u2 in net0.friends
 
-  sn.all_users = s.all_users
-  sn.all_photos = s.all_photos
-  sn.friends = s.friends - (u1 -> u2) - (u2 -> u1)
-  sn.all_comments = s.all_comments
-  sn.user_content_map = s.user_content_map
-  sn.content_comment_map = s.content_comment_map
-  sn.content_tag_map = s.content_tag_map - u2.(s.user_content_map) -> u1 - u1.(s.user_content_map) -> u2
+  net1.all_users = net0.all_users
+  net1.all_photos = net0.all_photos
+  net1.friends = net0.friends - (u1 -> u2) - (u2 -> u1)
+  net1.all_comments = net0.all_comments
+  net1.user_content_map = net0.user_content_map
+  net1.content_comment_map = net0.content_comment_map
+  net1.content_tag_map = net0.content_tag_map - u2.(net0.user_content_map) -> u1 - u1.(net0.user_content_map) -> u2
 }

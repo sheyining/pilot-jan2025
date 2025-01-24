@@ -27,20 +27,20 @@ pred Invariant [n: Network] {
 // =======================
 // BUGGY OPERATION
 // =======================
-pred MergeWithSuccessor [n0, n1: Network, node: Node] {
-  node in n0.all_nodes
+pred MergeWithSuccessor [net0, net1: Network, node: Node] {
+  node in net0.all_nodes
 
-  let next = node.(n0.succ) {
-    n1.all_nodes = n0.all_nodes - next 
+  let next = node.(net0.succ) {
+    net1.all_nodes = net0.all_nodes - next 
 
-    let afterNext = next.(n0.succ) |
-      n1.succ = n0.succ + (node -> afterNext) - (node -> next) - (next -> afterNext)
+    let afterNext = next.(net0.succ) |
+      net1.succ = net0.succ + (node -> afterNext) - (node -> next) - (next -> afterNext)
 
-    all n: n1.all_nodes {
-      n = node implies n1.node_data[n] = n0.node_data[next]
-      else n1.node_data[n] = n0.node_data[n]
+    all n: net1.all_nodes {
+      n = node implies net1.node_data[n] = net0.node_data[next]
+      else net1.node_data[n] = net0.node_data[n]
     }
 
-    n1.all_data = { d: n0.all_data | some (n1.node_data).d }
+    net1.all_data = { d: net0.all_data | some (net1.node_data).d }
   }
 }

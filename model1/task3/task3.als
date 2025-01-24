@@ -28,14 +28,14 @@ pred Invariant [n: Network] {
 // =======================
 // BUGGY OPERATION
 // =======================
-pred RemoveNode [n0, n1: Network, node: Node] {
-  node in n0.all_nodes
-  n1.all_nodes = n0.all_nodes - node
-  let nodeBefore = (n0.succ).node, nodeAfter = node.(n0.succ) |
-  n1.succ = n0.succ  + (nodeBefore -> nodeAfter) - (node -> univ) - (univ -> node)
+pred RemoveNode [net0, net1: Network, node: Node] {
+  node in net0.all_nodes
+  net1.all_nodes = net0.all_nodes - node
+  let nodeBefore = (net0.succ).node, nodeAfter = node.(net0.succ) |
+  net1.succ = net0.succ  + (nodeBefore -> nodeAfter) - (node -> univ) - (univ -> node)
 
-  let associatedData = node.(n0.node_data) {
-    n1.node_data = n0.node_data - (univ -> associatedData)
-    n1.all_data = n0.all_data - associatedData
+  let associatedData = node.(net0.node_data) {
+    net1.node_data = net0.node_data - (univ -> associatedData)
+    net1.all_data = net0.all_data - associatedData
   }
 }
