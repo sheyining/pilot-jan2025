@@ -56,7 +56,9 @@ In other words, for a social network `net`,
 
 ## Invariants of the Model
 
-Invariants refer to the constraints that all valid social network states must satisfy. The invariants of this model are:
+Invariants refer to the constraints that all valid social network states must satisfy. Here, we provide a list of invariants of our model. Please take your time and focus on understanding the written descriptions, but the Alloy code is also available for your convenience.
+
+The invariants of this model are:
 
 **_Well-formedness invariants_**
 * All relations (`friends`, `user_content_map`, `content_tag_map`, `content_comment_map`) must refer to existing entities in the social network.

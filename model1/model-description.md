@@ -39,7 +39,9 @@ In other words, for a network state `net`,
 
 ## Invariants of the Model
 
-Invariants refer to the constraints that all valid network states must satisfy. For the ring network model, the invariants are:
+Invariants refer to the constraints that all valid network states must satisfy. Here, we provide a list of invariants of our model. Please take your time and focus on understanding the written descriptions, but the Alloy code is also available for your convenience.
+
+For the ring network model, the invariants are:
 * Dangling data are disallowed: each piece of data in a network state must be associated with one or more nodes.
 * All nodes in the network state are arranged into one and only one ring.
 
