@@ -1,4 +1,4 @@
-# Task 1
+# Practice Task
 
 ## Specification of Operation
 
@@ -18,9 +18,9 @@ If `AddNodeAfter[net0, net1, n0, n1]` holds, then in `net1`, `n0` should appear 
 
 You will soon see two visualizations, one of network state `net0` and one of `net1`, which are related through
 ```
-AddNodeAfter[net0, net1, Node3, Node2]
+AddNodeAfter[net0, net1, Node0, Node1]
 ```
-In other words, `net1` is the result of adding node `Node3` after `Node2` in `net0`.
+In other words, `net1` is the result of adding node `Node0` after `Node1` in `net0`.
 
 The implementation of the operation `AddNodeAfter` contains a bug. Therefore, the diagrams you will see show an execution of this buggy version of `AddNodeAfter`. Your task is to use the diagrams to diagnose the bug.
 

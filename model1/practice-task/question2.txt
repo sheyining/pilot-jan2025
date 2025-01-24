@@ -1,0 +1,9 @@
+QUESTION 2:
+
+What is the bug in the implementation of the buggy operations?
+
+Is the implementation missing something, or overspecifying something, or mis-specifying something?
+If so, what? Or is the bug something else?
+
+== BEGIN YOUR RESPONSE HERE ==
+
