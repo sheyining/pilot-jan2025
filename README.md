@@ -11,12 +11,16 @@ Today, you will work on two models:
 * a model of a simple social network.
 
 For each model,
-* You will first read a written description of the model. [~10 minutes]
+* You will first **read a written description of the model**. [~10 minutes]
 * Then, you will perform a number of tasks. Each task involves an incorrectly-implemented *operation* on the model (i.e., the operation's implementation is buggy). For each task, you will:
-  * Read a written description of the operation relevant to the task. [~5 minutes]
-  * Use the provided visualization to identify the bug in the operation. [~5 minutes]
-  * Use the provided visualization to localize the bug in the Alloy code. [~5 minutes].
+  * **Read a written description of the operation** relevant to the task. [~5 minutes]
+  * Use the provided visualization to **identify the bug in the operation**. [~5 minutes]
+  * Use the provided visualization to **localize the bug in the Alloy code**. [~5 minutes].
 
 Throughout the study, if you have any questions, please feel free to ask!
+
+## Practice Task
+
+You will now first familiarize yourself with the experiment process by working through a practice task under the first model.
 
 **Once you are ready to proceed to the first task, please let the researcher know. Thank you!**
