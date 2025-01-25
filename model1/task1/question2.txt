@@ -7,3 +7,4 @@ If so, what? Or is the bug something else?
 
 == BEGIN YOUR RESPONSE HERE ==
 
+When node0 is being added, the relation between node1 and node0 is reversed. It should be node1->node0.

@@ -7,4 +7,4 @@ Describe the "phenomenon", not the "cause".
 For example, which parts of the diagram exhibit the bug?
 
 == BEGIN YOUR RESPONSE HERE ==
-
+After deleting the friendship between user0 and user1. The old comment made by users under the photo posted by user1 still exists, which violates the commentInv.

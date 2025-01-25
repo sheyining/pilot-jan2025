@@ -7,4 +7,4 @@ Describe the "phenomenon", not the "cause".
 For example, which parts of the diagram exhibit the bug?
 
 == BEGIN YOUR RESPONSE HERE ==
-
+All the node_data associated with the removed node have been removed no matter whether the data is associated with another node.

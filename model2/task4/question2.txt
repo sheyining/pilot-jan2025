@@ -6,4 +6,5 @@ Is the implementation missing something, or overspecifying something, or mis-spe
 If so, what? Or is the bug something else?
 
 == BEGIN YOUR RESPONSE HERE ==
-
+Line 91 & 92: The operation doesn't change the content mapping and comment mapping. But they may be affected by the deletion of friendship.
+The implementation misses to perform such works.

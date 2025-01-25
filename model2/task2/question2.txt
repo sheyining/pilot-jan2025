@@ -7,3 +7,4 @@ If so, what? Or is the bug something else?
 
 == BEGIN YOUR RESPONSE HERE ==
 
+The implementation missed to remove the downstream comments associated with the removed user's contents.

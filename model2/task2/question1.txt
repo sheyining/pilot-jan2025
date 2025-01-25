@@ -7,4 +7,4 @@ Describe the "phenomenon", not the "cause".
 For example, which parts of the diagram exhibit the bug?
 
 == BEGIN YOUR RESPONSE HERE ==
-
+The comments associated with this content has not been deleted together.
