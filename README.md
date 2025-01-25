@@ -17,9 +17,11 @@ For each model,
   * Use the provided visualization to **identify the bug in the operation**. [~5 minutes]
   * Use the provided visualization to **localize the bug in the Alloy code**. [~5 minutes].
 
+You will work on the tasks in a GitHub codespace.
+
 Throughout the study, if you have any questions, please feel free to ask!
 
-## Practice Task
+## Getting Started
 
 You will now first familiarize yourself with the experiment process by working through a practice task under the first model.
 
